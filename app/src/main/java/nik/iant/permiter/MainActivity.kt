@@ -3,6 +3,8 @@ package nik.iant.permiter
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Resources
+import android.graphics.Color
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,8 +17,13 @@ import java.lang.Exception
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(android.R.style.Theme_DeviceDefault_Light_NoActionBar)
         setContentView(R.layout.activity_main)
         val btnCaller = findViewById<Button>(R.id.btnCall)
+        findViewById<Button>(R.id.btnList).setOnClickListener {
+            val myListActivity = Intent(this, showList::class.java)
+            startActivity(myListActivity)
+        }
         btnCaller.setOnClickListener{
             try{
 

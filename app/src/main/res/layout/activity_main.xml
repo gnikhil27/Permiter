@@ -13,6 +13,12 @@
         android:layout_height="wrap_content"
         android:text="Click to Call" />
 
+    <Button
+        android:id="@+id/btnList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show me the List" />
+
     <TextView
         android:id="@+id/txtlog"
         android:layout_width="match_parent"
