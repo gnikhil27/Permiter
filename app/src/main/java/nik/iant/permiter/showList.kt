@@ -2,6 +2,7 @@ package nik.iant.permiter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -15,9 +16,11 @@ class showList : AppCompatActivity() {
         val myRecycler = findViewById<RecyclerView>(R.id.rcvVegies)
         val lmm = LinearLayoutManager(this)
         val myAdapter = VegAdapter(this, arrayOf(
-            "Tomato","Potato","Brinjal"
+            "Tomato","Potato"
         ))
+        Toast.makeText(this, myAdapter.itemCount.toString(), Toast.LENGTH_SHORT).show()
         myRecycler.layoutManager = lmm
         myRecycler.adapter = myAdapter
+
     }
 }

@@ -8,7 +8,7 @@ import android.widget.CheckBox
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
-class VegAdapter(private val nContext: Context, private val lstVeg: Array<String>):RecyclerView.Adapter<VegAdapter. MyViewHolder>() {
+class VegAdapter(private val nContext: Context, private val lstVeg: Array<String>):RecyclerView.Adapter<VegAdapter.MyViewHolder>(){
 
     class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         fun setCheckBox(string: String){
@@ -23,7 +23,7 @@ class VegAdapter(private val nContext: Context, private val lstVeg: Array<String
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        Toast.makeText(nContext, "Called", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(nContext, "Called", Toast.LENGTH_SHORT).show()
         holder.setCheckBox(lstVeg[position])
     }
 
